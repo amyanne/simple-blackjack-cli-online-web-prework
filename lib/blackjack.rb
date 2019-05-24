@@ -8,7 +8,7 @@ def deal_card
   deal = rand 1..11
 end
 
-def display_card_total (card_total)
+def display_card_total(card_total)
   # code #display_card_total here
  puts "Your cards add up to #{card_total}"
 end
@@ -64,8 +64,8 @@ def runner
   welcome
   card_total = initial_round
   until card_total > 21 
-    hit?
-    display_card_total
+    card_total = hit?(card_total)
+    display_card_total(card_total)
   end
 end_game
   
